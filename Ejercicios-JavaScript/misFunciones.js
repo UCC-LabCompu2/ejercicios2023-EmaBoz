@@ -57,3 +57,15 @@ convertirGR = (id) => {
         document.getElementById("grados").value = grad;
     }
 }
+/**
+ * Muestra u oculta un div según el valor dado
+ * @method mostrar_ocultar
+ * @param {string} valor - Valor que indica si se muestra u oculta el div
+ */
+let mostrar_ocultar = (valor) =>{
+    if(valor==="val_mostrar"){
+        document.getElementById("unDiv").style.display = 'block';
+    } else if (valor==="val_ocultar"){
+        document.getElementById("unDiv").style.display = 'none';
+    }
+}
