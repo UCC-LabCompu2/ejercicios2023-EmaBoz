@@ -1,0 +1,19 @@
+div{
+    border: 2px solid rgba(31, 31, 185, 0.8);
+    margin: 10px 25px;
+    padding: 15px;
+    background-color: rgba(25, 59, 172, 0.2);
+    border-radius: 15px;
+    box-shadow: 6px 6px #000faf;
+}
+img{
+    border-radius: 50%;
+}
+.cvprincipal{
+    text-align: center;
+    font-family: "Sedan SC", serif;
+    background:linear-gradient(to right, #5e5e5e, #717100);
+}
+h1{
+    text-shadow:2px 2px #26e586;
+}
