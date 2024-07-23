@@ -38,3 +38,22 @@ let convertirUnidades = (id, value) => {
     document.getElementById("pie").value = pie;
     document.getElementById("yarda").value = yarda;
 }
+/**
+ * Conversor de grados a radianes
+ * @method cambiar grados a radianes
+ * @param {String}id - grados - radianes
+ */
+convertirGR = (id) => {
+    let grad, rad;
+    //TODO: agregar mensaje de error
+    //TODO: admitir numeros con coma
+    if (id === "grados") {
+        grad = document.getElementById("grados").value;
+        rad = grad * Math.PI / 180;
+        document.getElementById("radianes").value = rad;
+    } else {
+        rad = document.getElementById("radianes").value;
+        grad = rad * 180 / Math.PI;
+        document.getElementById("grados").value = grad;
+    }
+}
