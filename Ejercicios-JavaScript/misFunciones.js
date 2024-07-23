@@ -103,3 +103,17 @@ let division = () =>{
     const d2= Number(document.getElementById("numd2").value);
     document.getElementById("totalD").innerHTML= d1/d2;
 }
+function cargarWeb(){
+    var cant, unidad, urlComp;
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
+    window.open(urlComp, "_self");
+}
+function cargarResultado(){
+    var urlComp, cant, unidad;
+    urlComp = window.location.href.split("#");
+    cant = urlComp[1];
+    unidad = urlComp[2];
+    document.getElementById("dist").value = cant + " " + unidad;
+}
