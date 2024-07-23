@@ -1,7 +1,7 @@
 /**
  * conversor de unidades
  * @method cambiar unidades
- * @param {string}id-el id de los inputs 
+ * @param {string}id-el id de los inputs
  * @param {number}valor-el valor de los inputs
  */
 let convertirUnidades = (id, value) => {
@@ -45,8 +45,6 @@ let convertirUnidades = (id, value) => {
  */
 convertirGR = (id) => {
     let grad, rad;
-    //TODO: agregar mensaje de error
-    //TODO: admitir numeros con coma
     if (id === "grados") {
         grad = document.getElementById("grados").value;
         rad = grad * Math.PI / 180;
@@ -63,9 +61,45 @@ convertirGR = (id) => {
  * @param {string} valor - Valor que indica si se muestra u oculta el div
  */
 let mostrar_ocultar = (valor) =>{
-    if(valor==="val_mostrar"){
-        document.getElementById("unDiv").style.display = 'block';
-    } else if (valor==="val_ocultar"){
-        document.getElementById("unDiv").style.display = 'none';
+        if(valor==="val_mostrar"){
+            document.getElementById("unDiv").style.display = 'block';
+        } else if (valor==="val_ocultar"){
+            document.getElementById("unDiv").style.display = 'none';
+        }
     }
+/**
+ * Suma dos números y muestra el resultado
+ * @method sumar
+ */
+let suma = () =>{
+    const s1= Number(document.getElementById("nums1").value);
+    const s2= Number(document.getElementById("nums2").value);
+    document.getElementById("totalS").innerHTML= s1+s2;
+}
+/**
+ * Resta dos números y muestra el resultado
+ * @method restar
+ */
+let resta = () =>{
+    const r1= Number(document.getElementById("numr1").value);
+    const r2= Number(document.getElementById("numr2").value);
+    document.getElementById("totalR").innerHTML= r1-r2;
+}
+/**
+ * Multiplica dos números y muestra el resultado
+ * @method multiplicar
+ */
+let multiplicacion = () =>{
+    const m1= Number(document.getElementById("numm1").value);
+    const m2= Number(document.getElementById("numm2").value);
+    document.getElementById("totalM").innerHTML= m1*m2;
+}
+/**
+ * Divide dos números y muestra el resultado
+ * @method dividir
+ */
+let division = () =>{
+    const d1= Number(document.getElementById("numd1").value);
+    const d2= Number(document.getElementById("numd2").value);
+    document.getElementById("totalD").innerHTML= d1/d2;
 }
