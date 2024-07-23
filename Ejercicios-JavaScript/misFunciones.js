@@ -117,3 +117,18 @@ function cargarResultado(){
     unidad = urlComp[2];
     document.getElementById("dist").value = cant + " " + unidad;
 }
+function guardarLocalStorage(){
+    let distancia, unidad;
+    distancia = document.getElementById('distancia').value;
+    unidad = document.getElementsByName('unidades')[0].value;
+    localStorage.setItem("distanciaLS", distancia);
+    localStorage.setItem("unidadLS", unidad);
+    window.open('2_web.html', "_self");
+}
+
+function cargarLocalStorage(){
+    let cant, un;
+    cant = localStorage.getItem("distanciaLS");
+    un = localStorage.getItem("unidadLS");
+    document.getElementById("dist").value = cant + " " + un;
+}
